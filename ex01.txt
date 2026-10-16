@@ -1,0 +1,18 @@
+Phần 1. Phân tích các lỗi cú pháp
+Đoạn mã gốc của bạn sinh viên gặp phải các lỗi sau:
+Lỗi cú pháp chèn hình ảnh (Image):
+Đoạn mã gốc: [Logo Dự án] ( [https://greentech.vn/logo.png](https://greentech.vn/logo.png) )
+Nguyên nhân: Có khoảng trắng thừa giữa [Logo Dự án] và dấu ngoặc đơn (), cũng như khoảng trắng bên trong ngoặc đơn. Cú pháp Markdown chuẩn cho hình ảnh bắt buộc phải có dấu chấm than ! ở đầu và không được có khoảng trắng giữa các cặp ngoặc vuông [] và ngoặc tròn ().
+Lỗi phân cấp tiêu đề (Heading hierarchy):
+Đoạn mã gốc: Nhảy cóc từ # Lợi ích của rau sạch (H1) xuống thẳng ### Danh sách các loại rau (H3).
+Nguyên nhân: Cấu trúc tiêu đề Markdown bị hỏng logic phân cấp (bỏ quên H2). Tiêu đề phụ trực thuộc ngay dưới H1 phải sử dụng H2 (##).
+Lỗi định dạng in đậm (Emphasis):
+Đoạn mã gốc: *Rất quan trọng*
+Nguyên nhân: Chỉ sử dụng 1 dấu sao * nên trình biên dịch sẽ hiểu đây là chữ nghiêng (Italic) thay vì chữ đậm (Bold). Để in đậm, cần sử dụng 2 dấu sao ** ở hai đầu (**Rất quan trọng**).
+Phần 2. Hoàn thiện đoạn mã chuẩn (Markdown Code)
+Bạn có thể sử dụng đoạn mã chuẩn dưới đây để dán vào file Markdown của mình:
+Markdown
+Lợi ích của rau sạch
+Danh sách các loại rau
+![Logo Dự án](https://greentech.vn/logo.png)
+**Rất quan trọng**
